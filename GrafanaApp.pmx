@@ -4,7 +4,8 @@ description: Grafana with InfluxDB and ElasticSearch
 keywords: grafana, influxdb, elasticsearch
 recommended: 
 type: Default
-documentation: "# Grafana Application that uses InfluxDB and ElasticSearch
+documentation: |
+# Grafana Application that uses InfluxDB and ElasticSearch
 
 ## Pre-requisites to run application
 
@@ -24,8 +25,6 @@ None.
 3. Link InfluxDB service with an alias of INFLUXDB.
 4. Link ElasticSearch service with an alias of ELASTICSEARCH.
 
----
-
 ## Grafana service
 The first time that you run your container, a new user admin will be created for HTTP basic auth with a random password. To get the password, check the logs of the container. 
 
@@ -34,8 +33,6 @@ You can specify username and password for HTTP Basic Auth of Grafana service by 
 
 ### Grafana Web Interface
 Grafana exposes its web interface at port 80, so you can now login into Grafana via your browser: **http://127.0.0.1/**, using the username/password that you configured.
-
----
 
 ## Using Grafana with InfluxDB
 
@@ -56,8 +53,6 @@ InfluxDB exposes a web interface at port 8083, so if you map host port 81 to con
 ### Creating the database
 Using the InfluxDB web interface, create a database with the name that you specified in the environment variable 'INFLUXDB_NAME' while configuring InfluxDB service.
 
----
-
 ## Using Grafana with ElasticSearch
 If you want you use Elasticsearch to save and load you dashboards, you can provide the following environment variables for configuration: 
 
@@ -66,13 +61,11 @@ If you want you use Elasticsearch to save and load you dashboards, you can provi
 
 *Note*: You can also link your Elasticsearch container to Grafana by giving an alias of 'ELASTICSEARCH'.
 
----
-
 ## Resources
 * Source Documentation: https://registry.hub.docker.com/u/tutum/grafana/
 * Grafana: See 'tutum/grafana' and https://github.com/tutumcloud/tutum-docker-grafana
 * InfluxDB: See 'tutum/influxdb' and https://github.com/tutumcloud/tutum-docker-influxdb
-* ElasticSearch: See 'tutum/elasticsearch' and https://github.com/tutumcloud/tutum-docker-elasticsearch"
+* ElasticSearch: See 'tutum/elasticsearch' and https://github.com/tutumcloud/tutum-docker-elasticsearch
 images:
 - category: 
   name: tutum_influxdb_1
