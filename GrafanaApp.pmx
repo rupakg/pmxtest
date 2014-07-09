@@ -48,8 +48,8 @@ images:
   - service: tutum_elasticsearch
     alias: ELASTICSEARCH
   environment:
-    - variable: HTTP_USER
-      value: admin
-    - variable: INFLUXDB_NAME
-      value: rgdata
+  - variable: HTTP_USER
+    value: admin
+  - variable: INFLUXDB_NAME
+    value: rgdata
   volumes: []
