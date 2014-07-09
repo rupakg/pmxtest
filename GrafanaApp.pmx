@@ -19,7 +19,7 @@ images:
   - host_port: '81'
     container_port: '8083'
   links: []
-  environment: {}
+  environment: []
   volumes: []
 - category: 
   name: tutum_elasticsearch
@@ -30,7 +30,7 @@ images:
   expose: []
   ports: []
   links: []
-  environment: {}
+  environment: []
   volumes: []
 - category: 
   name: tutum_grafana_1
