@@ -8,8 +8,7 @@ documentation: "# Grafana Application that uses InfluxDB and ElasticSearch\r\n\r
 images:
 - category: 
   name: tutum_influxdb_1
-  repository: tutum/influxdb
-  tag: latest
+  source: tutum/influxdb
   description: 
   type: Default
   expose: []
@@ -23,8 +22,7 @@ images:
   volumes: []
 - category: 
   name: tutum_elasticsearch
-  repository: tutum/elasticsearch
-  tag: latest
+  source: tutum/elasticsearch
   description: 
   type: Default
   expose: []
@@ -34,8 +32,7 @@ images:
   volumes: []
 - category: 
   name: tutum_grafana_1
-  repository: tutum/grafana
-  tag: latest
+  source: tutum/grafana
   description: 
   type: Default
   expose: []
