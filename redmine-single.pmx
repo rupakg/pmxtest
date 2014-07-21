@@ -1,0 +1,17 @@
+---
+name: Redmine-Single
+description: Using https://registry.hub.docker.com/u/sameersbn/redmine/ as base image.
+keywords: redmine
+type: Default
+documentation: ''
+images:
+- name: sameersbn_redmine_latest
+  source: sameersbn/redmine:latest
+  type: Default
+  ports:
+  - host_port: '8085'
+    container_port: '80'
+    proto: TCP
+  volumes:
+  - host_path: "/var/data/redmin/files"
+    container_path: "/redmine/files"
