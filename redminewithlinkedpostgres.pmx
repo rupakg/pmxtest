@@ -1,0 +1,37 @@
+---
+name: RedmineWithLinkedPostgres
+description: ''
+keywords: ''
+type: Default
+documentation: ''
+images:
+- name: paintedfox_postgresql_latest
+  source: paintedfox/postgresql:latest
+  type: Default
+  environment:
+  - variable: USER
+    value: redmine
+  - variable: PASS
+    value: password
+  - variable: DB
+    value: redmine_production
+- name: sameersbn_redmine
+  source: sameersbn/redmine:latest
+  type: Default
+  ports:
+  - host_port: '8086'
+    container_port: '80'
+    proto: TCP
+  links:
+  - service: paintedfox_postgresql_latest
+    alias: postgresql
+  environment:
+  - variable: DB_USER
+    value: redmine
+  - variable: DB_PASS
+    value: password
+  - variable: DB_NAME
+    value: redmine_production
+  volumes:
+  - host_path: "/var/data/redmine/files"
+    container_path: "/redmine/files"
