@@ -19,7 +19,7 @@ images:
   source: sameersbn/redmine:latest
   type: Default
   ports:
-  - host_port: '8086'
+  - host_port: '8087'
     container_port: '80'
     proto: TCP
   links:
@@ -32,6 +32,8 @@ images:
     value: password
   - variable: DB_NAME
     value: redmine_production
+  - variable: DB_TYPE
+    value: postgres
   volumes:
   - host_path: "/var/data/redmine/files"
     container_path: "/redmine/files"
